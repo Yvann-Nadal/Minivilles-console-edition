@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MinivillesConsoleEdition
+﻿namespace MinivillesConsoleEdition
 {
-    internal class Card
+    public class Card
     {
         public readonly string Name;
         public readonly string Color;
@@ -26,9 +19,9 @@ namespace MinivillesConsoleEdition
             ActivationNum = actNum;
         }
 
-        public void Effect()
+        public int Effect()
         {
-
+            return Income;
         }
 
         public override string ToString()
