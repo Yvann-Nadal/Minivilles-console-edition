@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MinivillesConsoleEdition
 {
-    internal class Class1
+    internal class Dice
     {
     }
 }
