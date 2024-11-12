@@ -8,24 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\yvann\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\mariu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yvann\\source\\repos\\MinivillesConsoleEdition\\MinivillesConsoleEdition\\MinivillesConsoleEdition.csproj",
+      "projectUniqueName": "C:\\Users\\mariu\\Desktop\\ENJMIN\\Cours\\USRS46_C#_POO\\MiniVilles Console\\Minivilles-console-edition\\MinivillesConsoleEdition\\MinivillesConsoleEdition.csproj",
       "projectName": "MinivillesConsoleEdition",
-      "projectPath": "C:\\Users\\yvann\\source\\repos\\MinivillesConsoleEdition\\MinivillesConsoleEdition\\MinivillesConsoleEdition.csproj",
-      "packagesPath": "C:\\Users\\yvann\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yvann\\source\\repos\\MinivillesConsoleEdition\\MinivillesConsoleEdition\\obj\\",
+      "projectPath": "C:\\Users\\mariu\\Desktop\\ENJMIN\\Cours\\USRS46_C#_POO\\MiniVilles Console\\Minivilles-console-edition\\MinivillesConsoleEdition\\MinivillesConsoleEdition.csproj",
+      "packagesPath": "C:\\Users\\mariu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mariu\\Desktop\\ENJMIN\\Cours\\USRS46_C#_POO\\MiniVilles Console\\Minivilles-console-edition\\MinivillesConsoleEdition\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\yvann\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\mariu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -71,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
