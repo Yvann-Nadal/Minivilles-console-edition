@@ -1,6 +1,6 @@
 ﻿namespace MinivillesConsoleEdition
 {
-    internal class Dice
+    public class Dice
     {
         Random rand = new Random();
         private int faceCount;

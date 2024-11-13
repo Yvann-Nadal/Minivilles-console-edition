@@ -2,40 +2,44 @@
 {
     public class Card
     {
-        public readonly string Name;
-        public readonly string Color;
-        public readonly string EffectDesc;
-        public readonly int Price;
-        public readonly int Income;
-        public readonly int[] ActivationNum;
+        public CardsInfo Data;
 
-        public Card(string name, string color, string desc, int price, int income, int[] actNum)
+        public Card(string name, ConsoleColor color, string desc, int price, int income, int[] actNum)
+        {
+            Data = new CardsInfo(name, color, desc, price, income, actNum);
+        }
+
+        public void ShowData(int id, int own, int amount, bool affordable)
+        {
+            string actNum = "";
+            for(int i=0; i < Data.Dice.Length; i++)
+                actNum += $"{Data.Dice[i]}" + (i < Data.Dice.Length-1 ? " ou " : "");
+
+            Console.ForegroundColor = Data.Color;
+            Console.Write($"[{id}] - \"{Data.Name}\"  Possédés : {own}  Disponible : {amount}\n{Data.Effect}\nS'active quand le total des dés est {actNum}\n" +
+                $"Prix : {Game.pile.CoinText(Data.Cost)}");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            if (!affordable) { Console.Write(" (Trop cher !)"); }
+            Console.WriteLine();
+        }
+    }
+
+    public struct CardsInfo
+    {
+        public readonly ConsoleColor Color;
+        public readonly int Cost;
+        public readonly string Name;
+        public readonly string Effect;
+        public readonly int[] Dice;
+        public readonly int Gain;
+        public CardsInfo(string name, ConsoleColor color, string desc, int price, int income, int[] actNum)
         {
             Name = name;
             Color = color;
-            EffectDesc = desc;
-            Price = price;
-            Income = income;
-            ActivationNum = actNum;
-        }
-
-        public int Effect()
-        {
-            return Income;
-        }
-
-        public override string ToString()
-        {
-            string actNum = "";
-            if (ActivationNum.Length == 1)
-                actNum = ActivationNum[0].ToString();
-            else
-            {
-                foreach (int i in ActivationNum)
-                    actNum += $"{i}/";
-                actNum.Remove(actNum.Length - 1, 1);
-            }
-            return $"Card : {Name} ({Color} - {actNum})\n\"{EffectDesc}\"\nCost {Price} and earns {Income}";
+            Effect = desc;
+            Cost = price;
+            Gain = income;
+            Dice = actNum;
         }
     }
 }
