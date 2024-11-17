@@ -13,3 +13,18 @@ C:\Users\mariu\Desktop\ENJMIN\Cours\USRS46_C#_POO\MiniVilles Console\Minivilles-
 C:\Users\mariu\Desktop\ENJMIN\Cours\USRS46_C#_POO\MiniVilles Console\Minivilles-console-edition\MinivillesConsoleEdition\obj\Debug\net8.0\MinivillesConsoleEdition.pdb
 C:\Users\mariu\Desktop\ENJMIN\Cours\USRS46_C#_POO\MiniVilles Console\Minivilles-console-edition\MinivillesConsoleEdition\obj\Debug\net8.0\MinivillesConsoleEdition.genruntimeconfig.cache
 C:\Users\mariu\Desktop\ENJMIN\Cours\USRS46_C#_POO\MiniVilles Console\Minivilles-console-edition\MinivillesConsoleEdition\obj\Debug\net8.0\ref\MinivillesConsoleEdition.dll
+C:\Users\yvann\source\repos\MinivillesConsoleEdition\MinivillesConsoleEdition\bin\Debug\net8.0\MinivillesConsoleEdition.exe
+C:\Users\yvann\source\repos\MinivillesConsoleEdition\MinivillesConsoleEdition\bin\Debug\net8.0\MinivillesConsoleEdition.deps.json
+C:\Users\yvann\source\repos\MinivillesConsoleEdition\MinivillesConsoleEdition\bin\Debug\net8.0\MinivillesConsoleEdition.runtimeconfig.json
+C:\Users\yvann\source\repos\MinivillesConsoleEdition\MinivillesConsoleEdition\bin\Debug\net8.0\MinivillesConsoleEdition.dll
+C:\Users\yvann\source\repos\MinivillesConsoleEdition\MinivillesConsoleEdition\bin\Debug\net8.0\MinivillesConsoleEdition.pdb
+C:\Users\yvann\source\repos\MinivillesConsoleEdition\MinivillesConsoleEdition\obj\Debug\net8.0\MinivillesConsoleEdition.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yvann\source\repos\MinivillesConsoleEdition\MinivillesConsoleEdition\obj\Debug\net8.0\MinivillesConsoleEdition.AssemblyInfoInputs.cache
+C:\Users\yvann\source\repos\MinivillesConsoleEdition\MinivillesConsoleEdition\obj\Debug\net8.0\MinivillesConsoleEdition.AssemblyInfo.cs
+C:\Users\yvann\source\repos\MinivillesConsoleEdition\MinivillesConsoleEdition\obj\Debug\net8.0\MinivillesConsoleEdition.csproj.CoreCompileInputs.cache
+C:\Users\yvann\source\repos\MinivillesConsoleEdition\MinivillesConsoleEdition\obj\Debug\net8.0\MinivillesConsoleEdition.sourcelink.json
+C:\Users\yvann\source\repos\MinivillesConsoleEdition\MinivillesConsoleEdition\obj\Debug\net8.0\MinivillesConsoleEdition.dll
+C:\Users\yvann\source\repos\MinivillesConsoleEdition\MinivillesConsoleEdition\obj\Debug\net8.0\refint\MinivillesConsoleEdition.dll
+C:\Users\yvann\source\repos\MinivillesConsoleEdition\MinivillesConsoleEdition\obj\Debug\net8.0\MinivillesConsoleEdition.pdb
+C:\Users\yvann\source\repos\MinivillesConsoleEdition\MinivillesConsoleEdition\obj\Debug\net8.0\MinivillesConsoleEdition.genruntimeconfig.cache
+C:\Users\yvann\source\repos\MinivillesConsoleEdition\MinivillesConsoleEdition\obj\Debug\net8.0\ref\MinivillesConsoleEdition.dll

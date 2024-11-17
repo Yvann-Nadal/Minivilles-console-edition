@@ -16,11 +16,12 @@ namespace MinivillesConsoleEdition
             {"rapide", 10},{"standard",20},{"longue",30},{"expert",30}
         };
         private bool isEnd = false;
-        private readonly string gamemode = "standard";
+        private readonly string gamemode;
 
         public Game(string[] players)
         {
-            for(int id=0; id<players.Length; id++)
+            gamemode = ChooseGamemode();
+            for (int id = 0; id < players.Length; id++)
             {
                 if (players[id] == "AI")
                     Players.Add(new AI(id));
@@ -31,15 +32,35 @@ namespace MinivillesConsoleEdition
             ProcessGame();
         }
 
+        private string ChooseGamemode()
+        {
+            Console.WriteLine("Choisissez un mode de jeu :");
+            Console.WriteLine("1. Rapide");
+            Console.WriteLine("2. Standard");
+            Console.WriteLine("3. Longue");
+            Console.WriteLine("4. Expert");
+            Console.Write("Votre choix (1-4) : ");
+            string choice = Console.ReadLine();
+
+            return choice switch
+            {
+                "1" => "rapide",
+                "2" => "standard",
+                "3" => "longue",
+                "4" => "expert",
+                _ => "standard"
+            };
+        }
+
         private void ProcessGame()
         {
-            while(!isEnd)
+            while (!isEnd)
             {
                 Console.Clear();
                 Console.WriteLine("État du jeu : ");
                 foreach (Player player in Players)
                     Console.WriteLine($"{player.Name} a {pile.CoinText(player.CoinCount)}");
-                    int diceResult = Players[playerTurn].RollDice();
+                int diceResult = Players[playerTurn].RollDice();
                 Console.WriteLine($"{Players[playerTurn].Name} a fait {diceResult}\n");
                 Thread.Sleep(500);
 
@@ -64,12 +85,27 @@ namespace MinivillesConsoleEdition
         private bool isEnding()
         {
             bool end = false;
-            foreach(Player p in Players)
+            foreach (Player p in Players)
+            {
                 if (p.CoinCount >= gamemodeEnd[gamemode])
                 {
-                    Console.WriteLine($"{p.Name} a gagné !");
-                    end = true;
+                    if (gamemode == "expert")
+                    {
+                        // Vérifie si le joueur possède au moins une carte de chaque type
+                        bool hasAllCards = Game.pile.DrawPile.Keys.All(card => p.GetCardCount(card) > 0);
+                        if (hasAllCards)
+                        {
+                            Console.WriteLine($"{p.Name} a gagné ! (30 pièces et toutes les cartes)");
+                            end = true;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{p.Name} a gagné !");
+                        end = true;
+                    }
                 }
+            }
             return end;
         }
     }
