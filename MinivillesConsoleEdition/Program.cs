@@ -4,4 +4,5 @@
 Console.SetBufferSize(200, 200);
 //Console.SetWindowSize(100, 100);
 
-Game game = new Game(["Marius", "AI"]);
+Console.WriteLine("Entrez votre nom");
+Game game = new Game([Console.ReadLine(), "AI"]);
