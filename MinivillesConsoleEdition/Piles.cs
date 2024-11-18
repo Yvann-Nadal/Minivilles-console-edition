@@ -94,14 +94,14 @@ namespace MinivillesConsoleEdition
         /// <summary>
         /// Aide automatique à l'écriture du nom d'une carte
         /// </summary>
-        /// <param name="cardName">Le nom de la carte écrit par le joueur</param>
+        /// <param name="askCard">Le nom de la carte écrit par le joueur</param>
         /// <returns>Le nom de la carte avec une majuscule au début</returns>
-        private string CorrectCardName(string cardName)
+        private string CorrectCardName(string askCard)
         {
-            if (cardName.Length > 0)
-                return char.ToUpper(cardName[0]) + cardName.Substring(1);
+            if (askCard.Length > 0)
+                return char.ToUpper(askCard[0]) + askCard.Substring(1);
             else
-                return cardName;
+                return askCard;
         }
 
         /// <summary>

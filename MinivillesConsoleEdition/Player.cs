@@ -37,8 +37,8 @@
             Name = name;
             Id = id;
             CoinCount = coins;
-            Deck.Add(Game.pile.PickCard("Boulangerie"));
-            Deck.Add(Game.pile.PickCard("Champs de blé"));
+            Deck.Add(Game.Pile.PickCard("Boulangerie"));
+            Deck.Add(Game.Pile.PickCard("Champs de blé"));
         }
 
         /// <summary>
@@ -138,7 +138,7 @@
         /// </summary>
         public virtual void PurchasePhase()
         {
-            if(Game.pile.DisplayShop(this))
+            if(Game.Pile.DisplayShop(this))
             {
                 // Définit l'action du joueur
                 string wanted = "";
@@ -146,19 +146,19 @@
                 {
                     Console.WriteLine("Écrivez le numéro ou le nom du bâtiment que vous voulez acheter. Écrivez \"Rien\" ou \"0\" pour ne rien acheter.");
                     wanted = Console.ReadLine().TrimEnd();
-                    if(int.TryParse(wanted, out int id) && id >= 0 && id <= Game.pile.DrawPile.Count)
+                    if(int.TryParse(wanted, out int id) && id >= 0 && id <= Game.Pile.DrawPile.Count)
                     {
                         if (id == 0)
                             wanted = "rien";
                         else
-                            wanted = Game.pile.DrawPile.Keys.ToArray()[id-1].Data.Name;
+                            wanted = Game.Pile.DrawPile.Keys.ToArray()[id-1].Data.Name;
                     }
-                } while (!Game.pile.HasCard(wanted, CoinCount) && wanted.ToLower() != "rien");
+                } while (!Game.Pile.HasCard(wanted, CoinCount) && wanted.ToLower() != "rien");
 
                 // Si le joueur a acheté une carte
                 if (wanted.ToLower() != "rien")
                 {
-                    Card newCard = Game.pile.PickCard(wanted);
+                    Card newCard = Game.Pile.PickCard(wanted);
                     Deck.Add(newCard);
                     CoinCount -= newCard.Data.Cost;
                     Console.WriteLine($"{Name} achète la carte {newCard.Data.Name}");
@@ -197,10 +197,10 @@
         /// </summary>
         public override void PurchasePhase()
         {
-            List<Card> cardsPurchasable = Game.pile.CardsPurchasable(CoinCount);
+            List<Card> cardsPurchasable = Game.Pile.CardsPurchasable(CoinCount);
             if (cardsPurchasable.Count > 0 && rand.Next(1)==1) // L'ordinateur a une chance sur deux d'acheter une carte s'il le peut
             {
-                Card newCard = Game.pile.PickCard(cardsPurchasable[rand.Next(cardsPurchasable.Count)].Data.Name);
+                Card newCard = Game.Pile.PickCard(cardsPurchasable[rand.Next(cardsPurchasable.Count)].Data.Name);
                 Deck.Add(newCard);
                 CoinCount -= newCard.Data.Cost;
                 Console.WriteLine($"{Name} achète {newCard.Data.Name}");

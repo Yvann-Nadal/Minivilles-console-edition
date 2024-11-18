@@ -15,7 +15,7 @@ namespace MinivillesConsoleEdition
         /// <summary>
         /// La pile contenant toutes les cartes du jeu initialement
         /// </summary>
-        public static Piles pile = new Piles();
+        public static Piles Pile = new Piles();
         /// <summary>
         /// L'id du joueur actuel
         /// </summary>
@@ -88,7 +88,7 @@ namespace MinivillesConsoleEdition
                 Console.Clear();
                 Console.WriteLine("État du jeu : ");
                 foreach (Player player in Players)
-                    Console.WriteLine($"{player.Name} a {pile.CoinText(player.CoinCount)}");
+                    Console.WriteLine($"{player.Name} a {Pile.CoinText(player.CoinCount)}");
 
                 // Procède au roulement du ou des dés
                 int diceResult = Players[playerTurn].RollDice();
@@ -131,7 +131,7 @@ namespace MinivillesConsoleEdition
                     if (gamemode == "expert")
                     {
                         // Vérifie si le joueur possède au moins une carte de chaque type
-                        bool hasAllCards = Game.pile.DrawPile.Keys.All(card => p.GetCardCount(card) > 0);
+                        bool hasAllCards = Game.Pile.DrawPile.Keys.All(card => p.GetCardCount(card) > 0);
                         if (hasAllCards)
                         {
                             Console.WriteLine($"{p.Name} a gagné ! (30 pièces et toutes les cartes)");

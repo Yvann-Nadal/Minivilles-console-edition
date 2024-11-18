@@ -39,7 +39,7 @@
 
             Console.ForegroundColor = Data.Color;
             Console.Write($"[{id}] - \"{Data.Name}\"  Possédés : {own}  {(amount==0 ? "Indisponible" : $"Disponible : {amount}")}\n{Data.Effect}\nS'active quand le total des dés est {actNum}\n" +
-                $"Prix : {Game.pile.CoinText(Data.Cost)}");
+                $"Prix : {Game.Pile.CoinText(Data.Cost)}");
             Console.ForegroundColor = ConsoleColor.Yellow;
             if (!canBuy) { Console.Write(" (Trop cher ou indisponible !)"); }
             Console.WriteLine();
