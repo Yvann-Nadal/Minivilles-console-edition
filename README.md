@@ -6,7 +6,7 @@ Minivilles est un jeu de gestion de ressources où les joueurs doivent acheter d
 
 Avant de pouvoir jouer à Minivilles, assurez-vous d'avoir les éléments suivants :
 
-- **.NET 5.0 ou supérieur** installé sur votre machine.
+- **.NET 7.0 ou supérieur** installé sur votre machine.
 - Un éditeur de texte ou un IDE compatible avec C# (Visual Studio, Visual Studio Code, etc.).
 
 ## Installation
